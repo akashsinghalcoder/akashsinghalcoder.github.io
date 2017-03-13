@@ -1,0 +1,53 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<p id="heading"><strong><em>Hey!!!!!! I am bot working for Akash Singhal and will tell everything about him<br>TYPE HELP TO KNOW MORE COMMANDS</em></strong></p>
+<ul id="commands"></ul>
+<span class="opening">@AkashSinghal$$----</span>
+<input type="text" name="field" onkeypress="handle(event)" id="field" autofocus="true">
+</body>
+<script>
+    function handle(e){
+        if(e.keyCode === 13){
+        	 e.preventDefault();
+        	 var field=document.getElementById("field");
+        	   var list=document.getElementById("commands");
+        	 var t=field.value;
+        	 field.value="";
+        	 var item = document.createElement('li');
+        	   var opening = document.createElement('li');
+        	   opening.innerHTML="@AkashSinghal$$----";
+        	   list.append(opening);
+        	   var command=document.createElement('li');
+        	   command.innerHTML=t;
+        	   list.append(command);
+        	   opening.className="mystyleopening";
+        	   command.className = "mystylecommand";
+        	   item.className="item"
+
+
+
+
+        	 switch(t)
+        	 {
+        	 	case "help":item.innerHTML="--about to know about me<br>\n--education to know about education<br>\n--skills to know about skills<br>\n"
+        	 	break;
+        	 	case "about":item.innerHTML="My name is AKASH and I am a web developer.<br>\nI am a college going student who is seeking an internship opportunity and wants to immerse myself in the software industry ASAP.<br> So i am working hard to achieve what I want.\n"
+        	 	break;
+        	 	case "education":item.innerHTML="I am pursuing Btech from Bharati Vidyapeeth College of Engineering<br>\nI did my schooling from one of the best schools in Delhi:SR DAV Public School Dayanand Vihar"
+        	 	break;
+        	 	case "skills":item.innerHTML="JUST don't worry about my skills. I am good enough"
+        	 	break; 
+
+        	 	default:item.innerHTML="Not a Valid command<br>\n"
+        	 }
+            
+          
+           list.append(item); // Ensure it is only this code that rus
+ 
+        }
+    }
+</script>
+</html>
