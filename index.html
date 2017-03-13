@@ -9,12 +9,20 @@
 <input type="text" name="field" onkeypress="handle(event)" id="field" autofocus="true">
 </body>
 <script>
+var history=[];
+var index=0;
+var currentindex=0;
+
     function handle(e){
+
         if(e.keyCode === 13){
         	 e.preventDefault();
         	 var field=document.getElementById("field");
         	   var list=document.getElementById("commands");
         	 var t=field.value;
+             history[index]=t;
+              index=index+1;
+              currentindex=currentindex+1;
         	 field.value="";
         	 var item = document.createElement('li');
         	   var opening = document.createElement('li');
@@ -47,6 +55,24 @@
           
            list.append(item); // Ensure it is only this code that rus
  
+        }
+        else if(e.keyCode===38)
+        { 
+            if(currentindex>0&&history[currentindex-1]!=undefined)
+            {  
+                currentindex=currentindex-1;
+            document.getElementById("field").value=history[currentindex];
+            }
+
+        }
+        else if (e.keyCode===40) 
+        {
+            if(currentindex<index&&history[currentindex+1]!=undefined)
+            {
+                currentindex=currentindex+1;
+               document.getElementById("field").value=history[currentindex];
+            }
+
         }
     }
 </script>
