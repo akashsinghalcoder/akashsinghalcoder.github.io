@@ -1,79 +1,90 @@
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="styles.css">
+	<title></title>
 </head>
 <body>
-<p id="heading"><strong><em>Hey!!!!!! I am bot working for Akash Singhal and will tell everything about him<br>TYPE HELP TO KNOW MORE COMMANDS</em></strong></p>
-<ul id="commands"></ul>
-<span class="opening">@AkashSinghal$$----</span>
-<input type="text" name="field" onkeypress="handle(event)" id="field" autofocus="true">
+<header>
+<q><em>Life is all about introspection</em></q>
+</header>
+<aside>
+	<img src="https://s-media-cache-ak0.pinimg.com/736x/94/2a/0f/942a0fb9239c544bd3680fe0aa7e6fa3.jpg" style="height:50%;">
+	<button onclick="changeframehome()" class="contentsofaside">Home</a>
+	<button onclick="changeframeabout()" class="contentsofaside">About</a>
+	<button onclick="changeframeskills()" class="contentsofaside">Skills</a>
+</aside>
+<div id="content"></div>
 </body>
-<script>
-var history=[];
-var index=0;
-var currentindex=0;
-
-    function handle(e){
-
-        if(e.keyCode === 13){
-        	 e.preventDefault();
-        	 var field=document.getElementById("field");
-        	   var list=document.getElementById("commands");
-        	 var t=field.value;
-             history[index]=t;
-              index=index+1;
-              currentindex=currentindex+1;
-        	 field.value="";
-        	 var item = document.createElement('li');
-        	   var opening = document.createElement('li');
-        	   opening.innerHTML="@AkashSinghal$$----";
-        	   list.append(opening);
-        	   var command=document.createElement('li');
-        	   command.innerHTML=t;
-        	   list.append(command);
-        	   opening.className="mystyleopening";
-        	   command.className = "mystylecommand";
-        	   item.className="item"
-
-
-
-
-        	 switch(t)
-        	 {
-        	 	case "help":item.innerHTML="--about to know about me<br>\n--education to know about education<br>\n--skills to know about skills<br>\n"
-        	 	break;
-        	 	case "about":item.innerHTML="My name is AKASH and I am a web developer.<br>\nI am a college going student who is seeking an internship opportunity and wants to immerse myself in the software industry ASAP.<br> So i am working hard to achieve what I want.\n"
-        	 	break;
-        	 	case "education":item.innerHTML="I am pursuing Btech from Bharati Vidyapeeth College of Engineering<br>\nI did my schooling from one of the best schools in Delhi:SR DAV Public School Dayanand Vihar"
-        	 	break;
-        	 	case "skills":item.innerHTML="JUST don't worry about my skills. I am good enough"
-        	 	break; 
-
-        	 	default:item.innerHTML="Not a Valid command<br>\n"
-        	 }
-            
-          
-           list.append(item); // Ensure it is only this code that rus
- 
-        }
-        else if(e.keyCode===38)
-        { 
-            if(currentindex>0&&history[currentindex-1]!=undefined)
-            {  
-                currentindex=currentindex-1;
-            document.getElementById("field").value=history[currentindex];
-            }
-
-        }
-        else if (e.keyCode===40) 
-        {
-            if(currentindex<index&&history[currentindex+1]!=undefined)
-            {
-                currentindex=currentindex+1;
-               document.getElementById("field").value=history[currentindex];
-            }
-
-        }
-    }
+<script type="text/javascript">
+	function changeframehome()
+	{
+		
+	document.getElementById("content").innerHTML='<object type="text/html" data="terminal.html" style="width:100%; height:100%"></object>';
+	}
+	function changeframeabout()
+	{
+	document.getElementById("content").innerHTML='<object type="text/html" data="about.html" style="width:100%; height:100%"></object>';
+	}
+	function changeframeskills()
+	{
+	document.getElementById("content").innerHTML='<object type="text/html" data="skills.html" style="width:100%; height:100%"></object>';
+	}
 </script>
 </html>
+<style type="text/css">
+body{
+	padding-top:25px;
+	padding-left:20%;
+	margin:0;
+}
+
+ header
+ {
+ 	position: fixed;
+ 	top:0px;
+ 	left: 0px;
+ 	background-color: #2F2E32;
+ 	text-align: center;
+ 	width: 100%;
+ 	padding: 4px;
+ 	border-color: #000000;
+ 	border-width:1px;
+ 	color:#ffffff;
+ 	font-weight: solid;
+ 	font-family:sans-serif;
+ 	z-index: 1;
+
+ }
+  aside
+ {
+ 	
+ 	height: 100%;
+ 	width:20%;
+ 	background-color: #2F2E32;
+ 	border-color: #000000;
+ 	border-width:1px;
+ 	border-style: solid;
+ 	display: flex;
+ 	flex-direction: column;
+ 	position: fixed;
+ 	left: 0px;
+ }
+  .contentsofaside
+ {
+ 	border-bottom: 1px solid #000000;
+ 	text-align: center;
+ 	padding:10px;
+ 	color:#000000;
+ 	font-weight: solid;
+ 	text-decoration: none;
+ 	font-family: "Times New Roman" ;
+ }
+#content
+{
+	position: fixed;
+	height: 100%;
+	width: 80%;
+}
+
+
+ </style>
