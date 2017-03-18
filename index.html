@@ -12,11 +12,22 @@
 	<button onclick="changeframehome()" class="contentsofaside">Home</a>
 	<button onclick="changeframeabout()" class="contentsofaside">About</a>
 	<button onclick="changeframeskills()" class="contentsofaside">Skills</a>
+	<button onclick="changeframeprojects()" class="contentsofaside">Projects</a>
+	<button onclick="changeframepublications()" class="contentsofaside">Publications</a>
 </aside>
 <div id="content"></div>
 </body>
 <script type="text/javascript">
 	document.getElementById("content").innerHTML='<object type="text/html" data="terminal.html" style="width:100%; height:100%"></object>';
+function changeframehome()
+	{
+		
+	document.getElementById("content").innerHTML='<object type="text/html" data="terminal.html" style="width:100%; height:100%"></object>';
+	}	function changeframepublications()
+	{
+		
+	document.getElementById("content").innerHTML='<object type="text/html" data="publications.html" style="width:100%; height:100%"></object>';
+	}
 	function changeframehome()
 	{
 		
@@ -29,6 +40,11 @@
 	function changeframeskills()
 	{
 	document.getElementById("content").innerHTML='<object type="text/html" data="skills.html" style="width:100%; height:100%"></object>';
+	}
+	function changeframeprojects()
+	{
+		
+	document.getElementById("content").innerHTML='<object type="text/html" data="projects.html" style="width:100%; height:100%"></object>';
 	}
 </script>
 </html>

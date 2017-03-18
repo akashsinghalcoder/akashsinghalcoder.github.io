@@ -1,6 +1,6 @@
 
 <body>
-<p id="heading"><strong><em>Hey!!!!!! I am bot working for Akash Singhal and will tell everything about him<br>TYPE HELP TO KNOW MORE COMMANDS</em></strong></p>
+<p id="heading"><strong><em>For quick communication<br>Hey!!!!!! I am bot working for Akash Singhal and will tell everything about him<br>TYPE HELP TO KNOW MORE COMMANDS</em></strong></p>
 <ul id="commands"></ul>
 <span class="opening">@AkashSinghal$$----</span>
 <input type="text" name="field" onkeypress="handle(event)" id="field" autofocus="true">
@@ -17,6 +17,7 @@ var currentindex=0;
         	 var field=document.getElementById("field");
         	   var list=document.getElementById("commands");
         	 var t=field.value;
+             t=t.trim();
              history[index]=t;
               index=index+1;
               currentindex=currentindex+1;
@@ -43,13 +44,13 @@ var currentindex=0;
         	 	break;
         	 	case "education":item.innerHTML="I am pursuing Btech from Bharati Vidyapeeth College of Engineering<br>\nI did my schooling from one of the best schools in Delhi:SR DAV Public School Dayanand Vihar"
         	 	break;
-        	 	case "skills":item.innerHTML="JUST don't worry about my skills. I am good enough"
+        	 	case "skills":item.innerHTML="It would be better if you will go to skills section in my resume"
         	 	break; 
 
         	 	default:item.innerHTML="Not a Valid command<br>\n"
         	 }
             
-          
+        
            list.append(item); // Ensure it is only this code that rus
  
         }
